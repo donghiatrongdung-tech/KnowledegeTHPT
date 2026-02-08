@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THPT Study Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    section {
+      padding: 60px 10%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #020617;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: #2563eb;
+      margin-bottom: 12px;
+    }
+    footer {
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>THPT Study Hub 📘</h1>
+    <p>Nơi tổng hợp kiến thức & chiến lược cho các kì thi quan trọng</p>
+  </header>
+
+  <section>
+    <h2>Môn học</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="badge">Core</span>
+        <h3>Toán</h3>
+        <p>Đại số, hình học, xác suất – nền tảng cho mọi kì thi.</p>
+      </div>
+      <div class="card">
+        <span class="badge">STEM</span>
+        <h3>Vật lí</h3>
+        <p>Cơ – điện – quang – hạt nhân, tư duy logic & ứng dụng.</p>
+      </div>
+      <div class="card">
+        <span class="badge">STEM</span>
+        <h3>Hóa học</h3>
+        <p>Hóa vô cơ, hữu cơ, tính toán – bám sát đề thi.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Xã hội</span>
+        <h3>Sinh học</h3>
+        <p>Di truyền, sinh thái, sinh học phân tử.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Các kì thi quan trọng</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="badge">ĐHQGHN</span>
+        <h3>HSA</h3>
+        <p>Đánh giá năng lực – tư duy tổng hợp, tốc độ và chiến thuật.</p>
+      </div>
+      <div class="card">
+        <span class="badge">ĐHBKHN</span>
+        <h3>TSA</h3>
+        <p>Tư duy khoa học, logic, toán học và đọc hiểu.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Quốc gia</span>
+        <h3>Tốt nghiệp THPT</h3>
+        <p>Kì thi then chốt cho xét tốt nghiệp & đại học.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Học sinh giỏi</span>
+        <h3>HSG</h3>
+        <p>Đào sâu kiến thức, rèn tư duy nâng cao.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 – THPT Study Hub | Học thông minh, thi hiệu quả 🚀
+  </footer>
+</body>
+</html>
