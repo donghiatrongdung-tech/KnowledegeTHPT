@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Phòng Vật Lí</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #020617, #020617);
+      color: #e5e7eb;
+    }
+
+    header {
+      padding: 32px;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #94a3b8;
+    }
+
+    main {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .box {
+      background: #020617;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: #0ea5e9;
+      color: #020617;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .box h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .box p {
+      color: #cbd5f5;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: #0ea5e9;
+      color: #020617;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>⚡ Phòng Vật Lí</h1>
+    <p>Cơ – Điện – Quang – Hạt nhân | Phục vụ HSA, TSA và các kì thi quan trọng</p>
+  </header>
+
+  <main>
+    <!-- KHU HỌC -->
+    <div class="box">
+      <span class="badge">Học tập</span>
+      <h2>Nội dung trọng tâm</h2>
+      <p>
+        Cơ học, điện xoay chiều, quang hình – quang sóng, vật lí hạt nhân.
+        Tư duy logic, bài toán thực tế, bám sát đề thi.
+      </p>
+    </div>
+
+    <!-- KHU AI -->
+    <div class="box">
+      <span class="badge">AI</span>
+      <h2>Trợ giảng AI Vật Lí</h2>
+      <p>
+        Khu vực dành cho AI giải bài, gợi ý hướng tư duy,
+        phân tích đề TSA – HSA từng bước.
+      </p>
+      <a class="btn" href="#">Mở AI (sắp có)</a>
+    </div>
+
+    <!-- KHU TÀI LIỆU -->
+    <div class="box">
+      <span class="badge">Tài liệu</span>
+      <h2>Tải tài liệu</h2>
+      <p>
+        Tổng hợp công thức, đề luyện, chuyên đề chọn lọc
+        theo từng mảng Vật Lí.
+      </p>
+      <a class="btn" href="#">Tải tài liệu</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 | Phòng học Vật Lí – THPT
+  </footer>
+
+</body>
+</html>
