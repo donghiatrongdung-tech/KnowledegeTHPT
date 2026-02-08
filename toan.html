@@ -1,104 +1,156 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Phòng Toán</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
       margin: 0;
-      padding: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #020617;
+      color: #e5e7eb;
     }
 
-    a {
+    header {
+      padding: 24px;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    header a {
       color: #38bdf8;
       text-decoration: none;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 32px;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
+      margin-top: 0;
+      font-size: 32px;
     }
 
-    .section {
+    .desc {
+      color: #94a3b8;
+      margin-bottom: 32px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
       background: #020617;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 20px;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
       border: 1px solid #1e293b;
     }
 
-    .section h2 {
-      font-size: 20px;
-      margin-bottom: 8px;
+    .card h2 {
+      margin-top: 0;
+      font-size: 22px;
     }
 
-    .placeholder {
-      color: #94a3b8;
-      font-style: italic;
+    .card p {
+      color: #cbd5f5;
+      line-height: 1.6;
+      font-size: 15px;
     }
 
-    .back {
-      margin-top: 20px;
+    .btn {
       display: inline-block;
-    }
-
-    button {
-      padding: 10px 14px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
+      margin-top: 16px;
+      padding: 10px 16px;
+      border-radius: 999px;
       background: #38bdf8;
       color: #020617;
-      font-weight: bold;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn.secondary {
+      background: #334155;
+      color: #e5e7eb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #64748b;
+      font-size: 13px;
+      border-top: 1px solid #1e293b;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>📐 Phòng Toán</h1>
-  <p>Đại số – Hình học – Xác suất | Nền tảng cho mọi kì thi</p>
+  <header>
+    <a href="index.html">← Quay về trang chủ</a>
+  </header>
 
-  <!-- KHU AI -->
-  <div class="section">
-    <h2>🤖 Trợ lý AI Toán</h2>
-    <p class="placeholder">
-      (Chỗ này để sau gắn AI: giải bài, gợi ý cách làm, giải thích từng bước)
+  <div class="container">
+    <h1>📐 Phòng Toán</h1>
+    <p class="desc">
+      Đại số – Hình học – Xác suất | Phục vụ TSA, HSA và các kì thi quan trọng.
     </p>
 
-    <!-- ví dụ nút sau này -->
-    <button disabled>Hỏi AI (sắp mở)</button>
+    <div class="grid">
+
+      <!-- KHU AI -->
+      <div class="card">
+        <h2>🤖 Trợ lý AI Toán</h2>
+        <p>
+          Khu vực dành cho AI:
+          <br>• Giải bài tập Toán từng bước
+          <br>• Gợi ý hướng tư duy
+          <br>• Phân tích dạng bài TSA / HSA
+        </p>
+        <a class="btn" href="#">Mở AI (sắp có)</a>
+      </div>
+
+      <!-- KHU TÀI LIỆU (CHỈ TẢI, KHÔNG UPLOAD) -->
+      <div class="card">
+        <h2>📚 Tài liệu Toán</h2>
+        <p>
+          Tài liệu học tập chọn lọc:
+          <br>• Công thức Toán THPT
+          <br>• Bài tập phân dạng
+          <br>• Đề luyện TSA / HSA
+        </p>
+
+        <!-- LINK TẢI FILE -->
+        <a class="btn secondary" href="docs/toan/cong-thuc-toan.pdf" download>
+          Tải PDF công thức
+        </a>
+      </div>
+
+      <!-- GHI CHÚ -->
+      <div class="card">
+        <h2>📝 Ghi chú & thông báo</h2>
+        <p>
+          Lịch học, deadline, lưu ý quan trọng
+          sẽ được cập nhật tại đây.
+        </p>
+      </div>
+
+    </div>
   </div>
 
-  <!-- KHU TÀI LIỆU -->
-  <div class="section">
-    <h2>📂 Tài liệu Toán</h2>
-    <ul>
-      <li><a href="#">📄 Công thức Toán cơ bản (PDF)</a></li>
-      <li><a href="#">📄 Bài tập Đại số</a></li>
-      <li><a href="#">📄 Bài tập Hình học</a></li>
-      <li><a href="#">📄 Đề luyện tập</a></li>
-    </ul>
-
-    <p class="placeholder">
-      (Sau này chỉ cần thay dấu # bằng link file là tải được)
-    </p>
-  </div>
-
-  <!-- KHU GHI CHÚ / THÔNG BÁO -->
-  <div class="section">
-    <h2>📝 Ghi chú / Thông báo</h2>
-    <p class="placeholder">
-      Ví dụ: lịch học, deadline, lưu ý quan trọng…
-    </p>
-  </div>
-
-  <a class="back" href="index.html">⬅ Quay lại trang chủ</a>
+  <footer>
+    © KnowledgeTHPT – Phòng Toán
+  </footer>
 
 </body>
 </html>
+
