@@ -2,141 +2,53 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>Phòng Hóa học</title>
+  <title>Phòng Hóa Học</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #020617, #020617);
-      color: #fff;
-    }
-
-    header {
-      padding: 24px;
-      background: #020617;
-      border-bottom: 1px solid #1e293b;
-    }
-
-    header a {
-      color: #38bdf8;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .container {
-      padding: 32px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: 32px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
-    }
-
-    .card {
-      background: #020617;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-    }
-
-    .card h2 {
-      margin-top: 0;
-      font-size: 22px;
-    }
-
-    .card p {
-      color: #cbd5f5;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .btn.secondary {
-      background: #334155;
-    }
-
-    footer {
-      text-align: center;
-      padding: 24px;
-      color: #94a3b8;
-      font-size: 13px;
-    }
+    body{margin:0;font-family:system-ui;background:#020617;color:#e5e7eb}
+    header{padding:24px;border-bottom:1px solid #1e293b}
+    header a{color:#38bdf8;text-decoration:none}
+    .container{max-width:1100px;margin:auto;padding:32px}
+    h1{margin-top:0}
+    .desc{color:#94a3b8;margin-bottom:32px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+    .card{border:1px solid #1e293b;border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .btn{display:inline-block;margin-top:16px;padding:10px 16px;border-radius:999px;background:#38bdf8;color:#020617;text-decoration:none;font-weight:600}
+    .btn.secondary{background:#334155;color:#e5e7eb}
+    footer{text-align:center;padding:24px;color:#64748b;border-top:1px solid #1e293b;margin-top:40px}
   </style>
 </head>
-
 <body>
+<header><a href="index.html">← Trang chủ</a></header>
+<div class="container">
+  <h1>🧪 Phòng Hóa Học</h1>
+  <p class="desc">Vô cơ – Hữu cơ – Hóa lý | Trọng tâm phản ứng & tư duy</p>
 
-  <header>
-    <a href="index.html">← Quay về trang chủ</a>
-  </header>
+  <div class="grid">
+    <div class="card">
+      <h2>🤖 AI Hóa</h2>
+      <p>Cân bằng PTHH, chuỗi phản ứng, nhận dạng chất.</p>
+      <a class="btn" href="#">Mở AI (sắp có)</a>
+    </div>
 
-  <div class="container">
-    <h1>🧪 Phòng Hóa học</h1>
-    <p>Hóa vô cơ – hữu cơ – tính toán, phục vụ các kì thi HSA, TSA và THPTQG.</p>
+    <div class="card">
+      <h2>📚 Tài liệu</h2>
+      <p>Sơ đồ phản ứng, bảng tính nhanh, đề luyện.</p>
+      <a class="btn secondary" href="docs/hoa/phan-ung-hoa.pdf" download>Tải PDF</a>
+    </div>
 
-    <div class="grid">
-
-      <!-- KHU AI -->
-      <div class="card">
-        <h2>🤖 Trợ lý AI Hóa học</h2>
-        <p>
-          Nơi tích hợp AI để:
-          <br>• Giải bài tập Hóa
-          <br>• Giải thích cơ chế phản ứng
-          <br>• Ôn tập theo chuyên đề
-        </p>
-        <a class="btn" href="#">Sắp mở</a>
-      </div>
-
-      <!-- TÀI LIỆU -->
-      <div class="card">
-        <h2>📚 Tài liệu Hóa học</h2>
-        <p>
-          Tổng hợp:
-          <br>• File PDF lý thuyết
-          <br>• Bài tập phân dạng
-          <br>• Đề thi HSA / TSA
-        </p>
-        <a class="btn secondary" href="#">Tải tài liệu</a>
-      </div>
-
-      <!-- LỘ TRÌNH -->
-      <div class="card">
-        <h2>🧭 Lộ trình học</h2>
-        <p>
-          Lộ trình học Hóa từ cơ bản → nâng cao,
-          tập trung dạng bài hay ra thi.
-        </p>
-        <a class="btn secondary" href="#">Xem lộ trình</a>
-      </div>
-
+    <div class="card">
+      <h2>📝 Ghi chú</h2>
+      <p>Mẹo tránh nhầm lẫn chất & hiện tượng.</p>
     </div>
   </div>
-
-  <footer>
-    © KnowledgeTHPT – Phòng Hóa học
-  </footer>
-
+</div>
+<footer>© KnowledgeTHPT – Phòng Hóa Học</footer>
 </body>
 </html>
+
+    
+  
+
+  
+   
