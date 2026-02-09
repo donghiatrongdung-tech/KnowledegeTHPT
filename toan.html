@@ -2,66 +2,85 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <title>AI Toán – Kỳ thi</title>
+  <title>AI Toán – Ôn thi THPT</title>
 
+  <!-- ===== STYLE ===== -->
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: white;
+      font-family: Inter, Arial, sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: #e5e7eb;
     }
 
     .container {
-      display: flex;
-      height: 100vh;
+      max-width: 1200px;
+      margin: 70px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
     }
 
-    .left {
-      flex: 2;
-      padding: 40px;
-    }
-
-    .right {
-      flex: 1;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .card {
+      background: rgba(15, 23, 42, 0.88);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.45);
     }
 
     h1 {
-      margin-bottom: 20px;
+      margin-top: 0;
+      font-size: 30px;
     }
 
     ul {
-      line-height: 2;
+      margin-top: 24px;
+      line-height: 2.1;
       font-size: 16px;
     }
 
-    button {
-      padding: 14px 24px;
+    .ai-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 320px;
+      border-radius: 18px;
+      border: 2px dashed rgba(255,255,255,0.15);
+      gap: 22px;
+      text-align: center;
+    }
+
+    .open-btn {
+      padding: 15px 32px;
       font-size: 16px;
       border-radius: 999px;
       border: none;
       cursor: pointer;
-      background: #3b82f6;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
       color: white;
-      margin-bottom: 20px;
+      transition: 0.2s ease;
     }
 
-    button:hover {
-      background: #2563eb;
+    .open-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(59,130,246,0.45);
     }
 
     .note {
-      opacity: 0.7;
       font-size: 14px;
-      text-align: center;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
-  <!-- CHATBASE CONFIG -->
+  <!-- ===== CHATBASE CONFIG (KHÔNG AUTO OPEN) ===== -->
   <script>
     window.chatbaseConfig = {
       chatbotId: "13z6pSNdede-EmFftP8YS"
@@ -76,8 +95,10 @@
 </head>
 
 <body>
+
   <div class="container">
-    <div class="left">
+    <!-- LEFT -->
+    <div class="card">
       <h1>📘 AI Toán – Ôn thi THPT</h1>
       <ul>
         <li>Hình học không gian</li>
@@ -87,25 +108,28 @@
       </ul>
     </div>
 
-    <div class="right">
-      <button onclick="openAI()">Mở AI Toán</button>
+    <!-- RIGHT -->
+    <div class="card ai-box">
+      <button class="open-btn" onclick="openAI()">Mở AI Toán</button>
       <div class="note">
-        AI chỉ mở khi bạn bấm nút 👆
+        AI chỉ mở khi bạn bấm nút 👆<br>
+        (mỗi người = 1 phiên chat riêng)
       </div>
     </div>
   </div>
 
+  <!-- ===== OPEN CHATBASE ===== -->
   <script>
     function openAI() {
-      if (window.chatbase) {
-        window.chatbase.open();
+      if (window.Chatbase) {
+        window.Chatbase.open();
       } else {
-        alert("AI đang load, chờ 2–3 giây rồi bấm lại nha 😅");
+        alert("AI đang load, chờ xíu rồi bấm lại nhé 😅");
       }
     }
   </script>
+
 </body>
 </html>
 
-
-   
+  
