@@ -1,149 +1,168 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
-<title>Phòng Toán</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>Phòng Toán</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-body{
-  margin:0;
-  font-family: system-ui, sans-serif;
-  background: radial-gradient(circle at top, #0b1a3a, #020617);
-  color:#fff;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #0b1a3a, #050b1a 70%);
+      color: #fff;
+    }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:40px 20px;
-}
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-h1{
-  font-size:40px;
-  margin-bottom:10px;
-}
+    .badge {
+      display: inline-block;
+      background: #2563eb;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
 
-.subtitle{
-  color:#93c5fd;
-  margin-bottom:40px;
-}
+    h1 {
+      font-size: 42px;
+      margin: 0 0 10px;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-  gap:24px;
-}
+    .subtitle {
+      color: #9bb3ff;
+      margin-bottom: 40px;
+    }
 
-.card{
-  background: rgba(255,255,255,0.06);
-  border-radius:20px;
-  padding:28px;
-  backdrop-filter: blur(10px);
-}
+    .grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 30px;
+    }
 
-.card h2{
-  margin-top:0;
-}
+    .card {
+      background: rgba(255,255,255,0.04);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
 
-ul{
-  padding-left:20px;
-}
+    .card h2 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-ul li{
-  margin:10px 0;
-}
+    .card ul {
+      padding-left: 18px;
+      line-height: 1.9;
+    }
 
-a{
-  color:#60a5fa;
-  text-decoration:none;
-}
+    .card a {
+      color: #7aa2ff;
+      text-decoration: none;
+    }
 
-a:hover{
-  text-decoration:underline;
-}
+    .card a:hover {
+      text-decoration: underline;
+    }
 
-/* AI */
-.btn-ai{
-  margin-top:20px;
-  background:#3b82f6;
-  border:none;
-  color:white;
-  padding:14px 20px;
-  border-radius:999px;
-  font-size:16px;
-  cursor:pointer;
-}
+    .btn {
+      margin-top: 18px;
+      background: linear-gradient(135deg,#3b82f6,#06b6d4);
+      color: #fff;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-.btn-ai:hover{
-  background:#2563eb;
-}
+    .btn:hover {
+      opacity: 0.9;
+    }
 
-#ai-room{
-  display:none;
-  margin-top:20px;
-  height:520px;
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,0.15);
-}
+    /* AI box */
+    #ai-box {
+      display: none;
+      margin-top: 40px;
+      background: rgba(0,0,0,0.45);
+      border-radius: 20px;
+      padding: 20px;
+    }
 
-iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
-</style>
+    iframe {
+      width: 100%;
+      height: 520px;
+      border: none;
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
-
-  <h1>📘 Phòng Toán</h1>
-  <div class="subtitle">
-    Đại số – Hình học – Xác suất | Phục vụ TSA, HSA & các kì thi quan trọng
-  </div>
-
-  <div class="grid">
-
-    <!-- TÀI LIỆU -->
-    <div class="card">
-      <h2>📂 Tài liệu & bài viết</h2>
-      <p>Chỉ quản trị viên mới cập nhật:</p>
-      <ul>
-        <li><a href="#">Đại số cơ bản – PDF</a></li>
-        <li><a href="#">Hình học không gian</a></li>
-        <li><a href="#">Chiến lược xác suất TSA</a></li>
-      </ul>
+  <div class="container">
+    <span class="badge">CORE</span>
+    <h1>📘 Phòng Toán</h1>
+    <div class="subtitle">
+      Đại số – Hình học – Xác suất | Phục vụ TSA, HSA và các kì thi quan trọng.
     </div>
 
-    <!-- AI -->
-    <div class="card">
-      <h2>🤖 Trợ lý AI Toán</h2>
-      <ul>
-        <li>Giải bài từng bước</li>
-        <li>Gợi ý hướng tư duy</li>
-        <li>Phân tích dạng bài TSA / HSA</li>
-      </ul>
+    <div class="grid">
+      <!-- TÀI LIỆU -->
+      <div class="card">
+        <h2>📁 Tài liệu & bài viết</h2>
+        <p>Danh sách tài liệu do quản trị viên chọn lọc:</p>
+        <ul>
+          <li><a href="#">Đại số cơ bản – PDF</a></li>
+          <li><a href="#">Hình học không gian</a></li>
+          <li><a href="#">Chiến lược xác suất TSA</a></li>
+        </ul>
+        <p style="opacity:0.7;font-size:14px;">
+          (Người dùng chỉ xem – không thể đăng tải)
+        </p>
+      </div>
 
-      <button class="btn-ai" onclick="openAI()">Mở AI Toán</button>
+      <!-- AI -->
+      <div class="card">
+        <h2>🤖 Trợ lý AI Toán</h2>
+        <p>Khu vực dành cho AI:</p>
+        <ul>
+          <li>Giải bài Toán từng bước</li>
+          <li>Gợi ý hướng tư duy</li>
+          <li>Phân tích dạng bài TSA / HSA</li>
+        </ul>
 
-      <div id="ai-room">
-        <iframe
-          src="https://www.chatbase.co/chatbot-iframe/13z6pSNdede-EmFtfP8YS">
-        </iframe>
+        <button class="btn" onclick="openAI()">Mở AI Toán</button>
       </div>
     </div>
 
+    <!-- PHÒNG AI RIÊNG -->
+    <div id="ai-box">
+      <iframe
+        src="https://www.chatbase.co/chatbot-iframe/13z6pSNdede-EmFtfP8YS"
+        allow="clipboard-write"
+      ></iframe>
+    </div>
   </div>
-</div>
 
-<script>
-function openAI(){
-  document.getElementById("ai-room").style.display = "block";
-}
-</script>
-
+  <script>
+    function openAI() {
+      document.getElementById("ai-box").style.display = "block";
+      document.getElementById("ai-box").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 </body>
 </html>
-
