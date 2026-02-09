@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Các kì thi quan trọng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(ellipse at top, #0f172a, #020617);
+      color: #e5e7eb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 48px 24px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      max-width: 720px;
+      margin-bottom: 36px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.35);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin: 10px 0;
+      color: #cbd5f5;
+    }
+
+    a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #38bdf8;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-top: 12px;
+    }
+
+    .ai-box {
+      margin-top: 12px;
+      padding: 16px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #020617, #020617);
+      border: 1px dashed #334155;
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 64px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>📌 Các kì thi quan trọng</h1>
+    <p class="subtitle">
+      Tổng hợp thông tin, bài phân tích và chiến lược học tập cho các kì thi lớn:
+      HSA, TSA, Tốt nghiệp THPT và Học sinh giỏi.
+      Nội dung được quản trị viên cập nhật.
+    </p>
+
+    <div class="grid">
+      <!-- KHU BÀI BÁO / LINK -->
+      <div class="card">
+        <h2>📰 Bài viết & liên kết</h2>
+        <ul>
+          <!-- CHỈ M SỬA LINK Ở ĐÂY -->
+          <li><a href="#">HSA: cấu trúc đề & phân bổ thời gian</a></li>
+          <li><a href="#">TSA – tư duy khoa học & logic</a></li>
+          <li><a href="#">Chiến lược ôn thi tốt nghiệp THPT</a></li>
+          <li><a href="#">Học sinh giỏi: học sâu thế nào?</a></li>
+        </ul>
+        <p class="note">✍️ Nội dung do admin cập nhật</p>
+      </div>
+
+      <!-- KHU AI -->
+      <div class="card">
+        <h2>🤖 AI hỗ trợ</h2>
+        <div class="ai-box">
+          Khu vực dành cho AI:
+          <br>– Giải thích đề thi
+          <br>– Gợi ý chiến lược làm bài
+          <br>– Trả lời câu hỏi về kì thi
+          <br><br>
+          (Sẽ tích hợp AI sau)
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © Nền tảng học tập THPT · Kì thi & định hướng
+    </footer>
+  </div>
+</body>
+</html>
