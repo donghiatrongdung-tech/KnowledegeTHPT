@@ -8,91 +8,69 @@
   <style>
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #0f1b3d, #050814);
+      font-family: "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1a3a, #050b1d);
       color: #fff;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       padding: 40px 20px;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
-    .desc {
-      color: #b8c1ff;
+    .subtitle {
+      color: #9bb7ff;
       margin-bottom: 40px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 24px;
+      gap: 30px;
     }
 
     .card {
-      background: rgba(255,255,255,0.04);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 0 40px rgba(0,0,0,0.4);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
 
     .card h2 {
       margin-top: 0;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
-    .badge {
-      display: inline-block;
-      background: #3b6cff;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
-
-    /* TÀI LIỆU */
-    .docs a {
-      display: block;
-      color: #7aa2ff;
-      text-decoration: none;
-      margin: 8px 0;
-    }
-
-    .docs a:hover {
-      text-decoration: underline;
-    }
-
-    /* AI CARD */
-    .ai-box ul {
+    ul {
       padding-left: 18px;
-      line-height: 1.7;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: #cdd9ff;
     }
 
     .ai-btn {
-      margin-top: 16px;
-      background: linear-gradient(135deg, #4da3ff, #2d6bff);
+      margin-top: 25px;
+      padding: 14px 26px;
       border: none;
-      padding: 14px 22px;
-      border-radius: 999px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #3aa3ff, #5f7cff);
       color: white;
       font-size: 16px;
       cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .ai-btn:hover {
-      opacity: 0.9;
-    }
-
-    /* ẨN CHATBASE LÚC ĐẦU */
-    #chatbase-bubble {
-      display: none !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(80,140,255,0.5);
     }
 
     @media (max-width: 900px) {
@@ -105,26 +83,25 @@
 
 <body>
   <div class="container">
-    <span class="badge">CORE</span>
     <h1>📘 Phòng Toán</h1>
-    <p class="desc">
-      Đại số – Hình học – Xác suất | Phục vụ TSA, HSA và các kì thi quan trọng.
-    </p>
+    <div class="subtitle">
+      Đại số – Hình học – Xác suất | Phục vụ TSA, HSA và các kì thi quan trọng
+    </div>
 
     <div class="grid">
       <!-- TÀI LIỆU -->
-      <div class="card docs">
+      <div class="card">
         <h2>📂 Tài liệu & bài viết</h2>
         <p>Danh sách tài liệu do quản trị viên chọn lọc:</p>
-
-        <!-- M CHỈ VIỆC THÊM / SỬA LINK Ở ĐÂY -->
-        <a href="https://example.com/daiso.pdf" target="_blank">• Đại số cơ bản – PDF</a>
-        <a href="https://example.com/hinhhoc.pdf" target="_blank">• Hình học không gian</a>
-        <a href="https://example.com/xacsuat.html" target="_blank">• Chiến lược xác suất TSA</a>
+        <ul>
+          <li>Đại số cơ bản – PDF</li>
+          <li>Hình học không gian</li>
+          <li>Chiến lược xác suất TSA</li>
+        </ul>
       </div>
 
-      <!-- AI -->
-      <div class="card ai-box">
+      <!-- AI TOÁN -->
+      <div class="card">
         <h2>🤖 Trợ lý AI Toán</h2>
         <p>Khu vực dành cho AI:</p>
         <ul>
@@ -133,35 +110,39 @@
           <li>Phân tích dạng bài TSA / HSA</li>
         </ul>
 
-        <button id="open-ai" class="ai-btn">Mở AI Toán</button>
+        <button class="ai-btn" id="open-ai">
+          Mở AI Toán
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- CHATBASE CONFIG -->
+  <!-- ================= CHATBASE CONFIG ================= -->
   <script>
     window.chatbaseConfig = {
-      chatbotId: "l3z6pSNdede-EmFftP8YS"
+      chatbotId: "l3z6pSNdede-EmFtfP8YS"
     };
   </script>
 
   <script
     src="https://www.chatbase.co/embed.min.js"
+    id="chatbase-script"
     defer>
   </script>
 
-  <!-- NÚT MỞ AI -->
+  <!-- ================= OPEN AI BUTTON ================= -->
   <script>
     document.getElementById("open-ai").addEventListener("click", () => {
-      const bubble = document.getElementById("chatbase-bubble");
-      if (bubble) {
-        bubble.style.display = "block";
-        bubble.click();
+      if (window.chatbase) {
+        window.chatbase.open();
+      } else {
+        alert("AI đang tải, chờ xíu nha 🤖");
       }
     });
   </script>
 </body>
 </html>
+
 
 
 
