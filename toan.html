@@ -1,134 +1,36 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <title>AI Toán – Ôn thi THPT</title>
-
-  <!-- ===== STYLE ===== -->
+  <meta charset="UTF-8">
+  <title>AI Toán THPT</title>
   <style>
     body {
       margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      background: radial-gradient(circle at top, #0f172a, #020617);
-      color: #e5e7eb;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 70px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 40px;
+    .box {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px;
     }
-
-    .card {
-      background: rgba(15, 23, 42, 0.88);
-      border-radius: 20px;
-      padding: 36px;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.45);
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: 30px;
-    }
-
-    ul {
-      margin-top: 24px;
-      line-height: 2.1;
-      font-size: 16px;
-    }
-
-    .ai-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 320px;
-      border-radius: 18px;
-      border: 2px dashed rgba(255,255,255,0.15);
-      gap: 22px;
-      text-align: center;
-    }
-
-    .open-btn {
-      padding: 15px 32px;
-      font-size: 16px;
-      border-radius: 999px;
+    iframe {
+      width: 100%;
+      height: 700px;
       border: none;
-      cursor: pointer;
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      color: white;
-      transition: 0.2s ease;
-    }
-
-    .open-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 25px rgba(59,130,246,0.45);
-    }
-
-    .note {
-      font-size: 14px;
-      opacity: 0.7;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
+      border-radius: 12px;
     }
   </style>
-
-  <!-- ===== CHATBASE CONFIG (KHÔNG AUTO OPEN) ===== -->
-  <script>
-    window.chatbaseConfig = {
-      chatbotId: "13z6pSNdede-EmFftP8YS"
-    };
-  </script>
-
-  <!-- CHATBASE SCRIPT -->
-  <script
-    src="https://www.chatbase.co/embed.min.js"
-    defer>
-  </script>
 </head>
-
 <body>
 
-  <div class="container">
-    <!-- LEFT -->
-    <div class="card">
-      <h1>📘 AI Toán – Ôn thi THPT</h1>
-      <ul>
-        <li>Hình học không gian</li>
-        <li>Chiến lược xác suất TSA</li>
-        <li>Phân tích dạng bài TSA / HSA</li>
-        <li>Giải từng bước – dễ hiểu</li>
-      </ul>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="card ai-box">
-      <button class="open-btn" onclick="openAI()">Mở AI Toán</button>
-      <div class="note">
-        AI chỉ mở khi bạn bấm nút 👆<br>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== OPEN CHATBASE ===== -->
-  <script>
-    function openAI() {
-      if (window.Chatbase) {
-        window.Chatbase.open();
-      } else {
-        alert("AI đang load, chờ xíu rồi bấm lại nhé 😅");
-      }
-    }
-  </script>
+<div class="box">
+  <iframe
+    src="https://www.chatbase.co/chatbot-iframe/l3z6pSNdede-EmFftP8YS">
+  </iframe>
+</div>
 
 </body>
 </html>
-
-  
