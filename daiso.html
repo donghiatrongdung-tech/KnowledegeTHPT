@@ -2,12 +2,12 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Toán Đại Số</title>
+  <title>Toán Đại số</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
+      font-family: Arial, sans-serif;
       padding: 40px;
     }
 
@@ -17,27 +17,41 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+      display: grid;
+      gap: 20px;
     }
 
-    .box {
+    .card {
       background: #111827;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
+      border-radius: 14px;
+      padding: 25px;
       border: 1px solid #1f2937;
     }
 
-    .box h3 {
+    .card h3 {
       margin-top: 0;
       color: #93c5fd;
     }
 
+    .item {
+      margin: 8px 0;
+    }
+
+    .item a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    .item a:hover {
+      text-decoration: underline;
+    }
+
     .back {
       display: block;
+      margin-top: 30px;
       text-align: center;
-      margin-top: 40px;
       color: #93c5fd;
       text-decoration: none;
     }
@@ -45,23 +59,27 @@
 </head>
 <body>
 
-<h1>📘 Toán Đại Số</h1>
+<h1>📘 Toán Đại số</h1>
 
 <div class="container">
-  <div class="box">
+  <div class="card">
     <h3>📌 Chuyên đề</h3>
-    <p>Phương trình – Bất phương trình – Hệ phương trình</p>
+    <div class="item">• Phương trình – hệ phương trình</div>
+    <div class="item">• Bất đẳng thức</div>
+    <div class="item">• Số phức</div>
   </div>
 
-  <div class="box">
-    <h3>📎 Bài viết / Tài liệu</h3>
-    <p>• Thêm link bài học tại đây<br>
-       • Thêm thông báo tại đây</p>
+  <div class="card">
+    <h3>📂 Tài liệu</h3>
+    <div class="item"><a href="#">📄 Công thức trọng tâm</a></div>
+    <div class="item"><a href="#">📄 Bài tập mẫu</a></div>
+    <div class="item"><a href="#">📄 Đề thi chọn lọc</a></div>
   </div>
 
-  <div class="box">
+  <div class="card">
     <h3>🤖 AI hỗ trợ</h3>
-    <p>Hỏi nhanh – giải từng bước – giải thích dễ hiểu</p>
+    <div class="item">• Hỏi đáp bài tập</div>
+    <div class="item">• Giải chi tiết từng bước</div>
   </div>
 </div>
 
@@ -69,3 +87,4 @@
 
 </body>
 </html>
+
