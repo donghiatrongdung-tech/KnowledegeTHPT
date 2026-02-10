@@ -136,6 +136,25 @@
   </footer>
 </body>
   <!-- CHATBASE AI TOÁN -->
+  <style>
+  /* Khung chat Chatbase */
+  #chatbase-bubble,
+  #chatbase-chat {
+    width: 420px !important;
+    height: 650px !important;
+    max-height: 90vh !important;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    #chatbase-bubble,
+    #chatbase-chat {
+      width: 100% !important;
+      height: 100vh !important;
+    }
+  }
+</style>
+
 <script>
 (function(){
   if(!window.chatbase || window.chatbase("getState")!=="initialized"){
