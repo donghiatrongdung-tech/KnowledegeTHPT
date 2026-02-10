@@ -1,9 +1,99 @@
-<h2>📐 Môn Toán</h2>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Môn Toán</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 40px;
+    }
 
-<ul>
-  <li><a href="toan-daiso.html">📘 Phòng Đại số</a></li>
-  <li><a href="toan-hinhhoc.html">📐 Phòng Hình học</a></li>
-  <li><a href="toan-giaitich.html">📊 Phòng Giải tích</a></li>
-</ul>
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-<a href="index.html">⬅ Quay về trang chính</a>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background: #111827;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.25s;
+      border: 1px solid #1f2933;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #1f2937;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📐 Môn Toán</h1>
+
+  <div class="grid">
+    <div class="card">
+      <a href="daiso.html">
+        <div class="icon">📘</div>
+        <h3>Đại số</h3>
+        <p>Công thức – phương trình – bất đẳng thức</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="hinhhoc.html">
+        <div class="icon">📐</div>
+        <h3>Hình học</h3>
+        <p>Không gian – hình phẳng – tư duy hình</p>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="giaitich.html">
+        <div class="icon">📊</div>
+        <h3>Giải tích</h3>
+        <p>Hàm số – đạo hàm – tích phân</p>
+      </a>
+    </div>
+  </div>
+
+  <a class="back" href="index.html">← Quay về trang chính</a>
+
+</body>
+</html>
+
