@@ -5,8 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THPT Study Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
+<style>
+  * { box-sizing: border-box; }
+
+  /* ==== CHATBASE FIX SIZE ==== */
+  iframe[src*="chatbase"] {
+    width: 420px !important;
+    height: 650px !important;
+    max-height: 90vh !important;
+  }
+
+  @media (max-width: 768px) {
+    iframe[src*="chatbase"] {
+      width: 100% !important;
+      height: 100vh !important;
+    }
+  }
+</style>
+
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -138,21 +155,7 @@
   <!-- CHATBASE AI TOÁN -->
   <style>
   /* Khung chat Chatbase */
-  #chatbase-bubble,
-  #chatbase-chat {
-    width: 420px !important;
-    height: 650px !important;
-    max-height: 90vh !important;
-  }
-
-  /* Mobile */
-  @media (max-width: 768px) {
-    #chatbase-bubble,
-    #chatbase-chat {
-      width: 100% !important;
-      height: 100vh !important;
-    }
-  }
+  
 </style>
 
 <script>
