@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Học Tập | Toán - Lý - Hóa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      margin: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 30px;
+      text-align: center;
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    header p {
+      opacity: 0.9;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #020617;
+      padding: 12px;
+    }
+    nav a {
+      color: #c7d2fe;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #93c5fd;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #020617;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #a5b4fc;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      border-radius: 8px;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      resize: none;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+    .output {
+      margin-top: 10px;
+      background: #020617;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🤖 AI HỖ TRỢ HỌC TẬP</h1>
+  <p>Toán • Vật Lý • Hóa Học | Cập nhật thi cử & đại học</p>
+</header>
+
+<nav>
+  <a href="#ai">AI Học Tập</a>
+  <a href="#subjects">Môn Học</a>
+  <a href="#news">Tin Thi & Đại Học</a>
+</nav>
+
+<section id="ai">
+  <h2>💬 Trợ lý AI học tập</h2>
+  <div class="card">
+    <p>Nhập câu hỏi Toán – Lý – Hóa, AI sẽ gợi ý cách làm:</p>
+    <textarea id="question" placeholder="Ví dụ: Giải phương trình bậc 2..."></textarea>
+    <button onclick="answer()">Hỏi AI</button>
+    <div class="output" id="output">AI sẽ trả lời tại đây...</div>
+  </div>
+</section>
+
+<section id="subjects">
+  <h2>📘 Các môn học</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📐 Toán học</h3>
+      <p>Đại số – Hình học – Giải tích</p>
+      <ul>
+        <li>Công thức trọng tâm</li>
+        <li>Dạng bài hay thi</li>
+        <li>Mẹo giải nhanh</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>⚡ Vật Lý</h3>
+      <p>Cơ – Nhiệt – Điện – Quang</p>
+      <ul>
+        <li>Tóm tắt lý thuyết</li>
+        <li>Bài tập mẫu</li>
+        <li>Ứng dụng thực tế</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🧪 Hóa Học</h3>
+      <p>Vô cơ – Hữu cơ – Hóa đại cương</p>
+      <ul>
+        <li>Phản ứng quan trọng</li>
+        <li>Chuỗi biến hóa</li>
+        <li>Mẹo nhớ nhanh</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <h2>📰 Tin mới: Kỳ thi & Đại học</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📌 Kỳ thi THPT</h3>
+      <p>• Lịch thi mới nhất<br>
+         • Cấu trúc đề minh họa<br>
+         • Quy chế thi cập nhật</p>
+    </div>
+    <div class="card">
+      <h3>🎓 Tuyển sinh đại học</h3>
+      <p>• Phương thức xét tuyển<br>
+         • Điểm chuẩn các năm<br>
+         • Ngành hot & xu hướng</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 | AI Học Tập | Build with ❤️ for học sinh Việt Nam
+</footer>
+
+<script>
+  function answer() {
+    const q = document.getElementById("question").value;
+    const out = document.getElementById("output");
+
+    if (!q.trim()) {
+      out.innerText = "❗ Hãy nhập câu hỏi trước.";
+      return;
+    }
+
+    out.innerText =
+      "🤖 AI gợi ý:\n" +
+      "- Xác định dạng bài\n" +
+      "- Ghi công thức liên quan\n" +
+      "- Làm từng bước rõ ràng\n\n" +
+      "(Sau này có thể nối ChatGPT/API để trả lời thật)";
+  }
+</script>
+
+</body>
+</html>
